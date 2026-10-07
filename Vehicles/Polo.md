@@ -1,40 +1,55 @@
 # Volkswagen Polo
 
-## Current known information
+## Confirmed identity
 
-This is the user's wife's Volkswagen Polo.
+- Model: 2022 UK Volkswagen Polo Life
+- Chassis: AW-VW27 (2Q0)
+- VIN: WVWZZZAWZNU044942
+- Initial scan mileage: approximately 21,060 km
+- VCDS: 26.3.0
+- Interface: genuine Ross-Tech HEX-V2
+- A5 front-sensor module: 2Q0 980 653 C
 
-A previous discussion established that one VIN slot on the genuine Ross-Tech HEX-V2 10-VIN interface was intended to be used for this car.
+## Baseline faults
 
-Possible VCDS work discussed included Lane Assist changes.
+- 09 BCM — B14D1 54 — window regulator missing calibration/basic setting
+- 17 Instruments — U1110 — BAP_Audio communication interrupted; frequency 4
+- 17 Instruments — U1110 — BAP_BCME communication interrupted; frequency 1
+- 5F Infotainment — B1067 13 — rear-right bass speaker open circuit; frequency 4; terminal-30 voltage 11.5 V in freeze-frame
 
-## Details not reliably recovered
+Modules reported OK included:
 
-The prior conversations currently available do not provide reliable values for:
+- 03 ABS
+- 10 Park/Steer Assist
+- 13 ACC
+- 44 Steering Assist
+- A5 Front Sensor Driver Assist
 
-- registration
-- model year
-- generation
-- trim
-- engine
-- engine code
-- VIN
-- installed control modules
-- front-camera type
-- current coding
-- current fault status
+## Lane Assist
 
-These details must not be guessed.
+The Polo has genuine A5 Lane Assist hardware.
 
-## First action when the Polo is next connected
+Recorded coding change:
 
-Before making changes:
+```text
+Byte 9: 9E -> 9F
+```
 
-1. Run a full VCDS Auto-Scan.
-2. Save the raw scan.
-3. Record VIN, model, engine and mileage.
-4. Check which driver-assistance modules are actually installed.
-5. Confirm whether an A5/front-camera module exists before discussing Lane Assist coding.
-6. Save adaptation maps for any module that may be changed.
+Purpose:
 
-The resulting scan should become the baseline for this file.
+Change Lane Assist startup behaviour from always active to **Last Setting**.
+
+Result:
+
+- accepted by the vehicle
+- tested successfully
+- no SFD problem reported
+- unrelated to the four pre-existing baseline faults
+- baseline faults were not cleared as part of this change
+
+## Source chats
+
+Exact archived chat names confirmed from the user's ChatGPT archive:
+
+- `VW Polo Lane Assist setup`
+- `Polo Lane Assist Disable`
