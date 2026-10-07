@@ -1,6 +1,6 @@
 # VCDS – Amalgamated Chat Record
 
-Version: 1.0.2  
+Version: 1.0.3 working master  
 Purpose: single maintainable record of VCDS / Golf / Polo information recovered from earlier ChatGPT conversations.
 
 This file replaces the earlier PDF as the preferred editable master for GitHub.
@@ -9,9 +9,9 @@ This file replaces the earlier PDF as the preferred editable master for GitHub.
 
 ## 1. Source chats used
 
-### Current chats
+### Earlier current chats already amalgamated
 
-The following **current chat names are taken from the user's visible ChatGPT sidebar** and were used when consolidating the VCDS material:
+These exact chat names were previously confirmed from the user's ChatGPT sidebar and were incorporated into the VCDS master record before they disappeared from the current-chat list:
 
 - `Investigate VCDS Faults`
 - `Enable PY66CUC Extra`
@@ -19,20 +19,37 @@ The following **current chat names are taken from the user's visible ChatGPT sid
 - `VCDS Scan Without Licence`
 - `VW Golf Fault Analysis`
 
+Their useful VCDS/Golf content has been carried into this master record.
+
+### Current working chat
+
+The current visible VCDS-related chat is:
+
+- `VDCS 1`
+
+This is the working consolidation/project-maintenance chat and should be retained while the VCDS repository is still being updated.
+
 ### Archived chats
 
-The following **archived chat names are taken from the user's Archived chats screen** and contain VCDS/Polo information used in the consolidation:
+The following exact archived chat names are VCDS/Polo-related:
 
 - `VW Polo Lane Assist setup`
 - `Polo Lane Assist Disable`
 
-### Current working chat
+Their relevant Polo details are incorporated into this master record, including the confirmed vehicle identity, baseline faults and Lane Assist coding change.
 
-- `Amalgamate VDCS Chats`
+### Current screenshot review
 
-This current chat is the project-consolidation discussion and should normally be retained while the VCDS repository is being established.
+A fresh review of the visible current-chat and archived-chat lists found no other chat titles clearly related to:
 
-### Important note about older labels
+- VCDS / VDCS
+- Volkswagen / VW
+- Golf
+- Polo
+
+Therefore the two archived Polo chats above are the only remaining old VCDS/VW/Polo/Golf source chats visible outside the current `VDCS 1` working chat.
+
+### Important note about older descriptive labels
 
 Earlier drafts used descriptive labels such as:
 
@@ -42,9 +59,9 @@ Earlier drafts used descriptive labels such as:
 - `Use VCDS On S23`
 - `Golf Lane Assist / coding-adaptation investigation`
 
-These were **not all exact sidebar/archive chat titles** and should not be used as the deletion list.
+These were not all exact sidebar/archive chat titles and must not be used as the deletion list.
 
-The current and archived names listed above are the names confirmed from the user's actual ChatGPT screens.
+The exact titles confirmed from the user's own ChatGPT screens are the titles listed above.
 
 ---
 
@@ -589,9 +606,11 @@ release with:
 .\PSTP.ps1 Release -Zip
 ```
 
-Initial release: `v1.0.1`
+The first release line is:
 
-Current corrective release: `v1.0.2`
+```text
+v1.0.1
+```
 
 Release-managed files such as `release.json` and `build-info.json` remain under PSTP control.
 
@@ -604,3 +623,30 @@ This Markdown file is now the preferred editable replacement for the earlier PDF
 The next repository update should incorporate the corrected Polo information and the exact current/archive source-chat names recorded here.
 
 Once all unique attachments from the source chats have also been saved into the VCDS repository, the old source chats can be considered for deletion.
+
+---
+
+# 21. Final chat-cleanup review
+
+Fresh screenshots of the current and archived ChatGPT lists were reviewed after VCDS v1.0.2.
+
+## Current chats
+
+The only VCDS/VW/Polo/Golf-related current chat still visible is:
+
+- `VDCS 1`
+
+Keep this chat for now because it is the active VCDS consolidation and repository-maintenance conversation.
+
+## Archived chats
+
+The only VCDS/VW/Polo/Golf-related archived chats still visible are:
+
+- `VW Polo Lane Assist setup`
+- `Polo Lane Assist Disable`
+
+Their relevant textual information is now represented in this master record.
+
+Before deleting either archived chat, confirm there are no unique raw VCDS scans, screenshots or other attachments in the chat that have not been copied into the GitHub repository.
+
+No other visible current or archived chat title in the supplied screenshots appears related to VCDS, Volkswagen, Golf or Polo.
